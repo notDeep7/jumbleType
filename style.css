@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+@font-face {
+    font-family: '3270';
+    src: url('fonts/3270Mono-Regular.ttf');
+}
 
 :root {
-    --bgColor: #333333;
+    --bgColor: rgb(18, 18, 18);
     --textPrimary: #fff;
     --textSecondary: #666;
     --primaryColor: rgb(174, 68, 255);
+}
+
+*{
+    font-family: '3270';
 }
 
 body {
@@ -21,6 +28,7 @@ main {
 
 h1 {
     color: var(--primaryColor);
+    text-align: center;
 }
 
 h1 svg {
@@ -62,10 +70,10 @@ div#game:focus {
     outline: 0;
 }
 
-#words {
+/* #words {
     filter: blur(5px);
     color: var(--textSecondary);
-}
+} */
 
 #game:focus #words {
     filter: blur(0);
@@ -84,7 +92,7 @@ div#game:focus {
 
 div.word {
     display: inline-block;
-    font-family: 'Roboto Mono', monospace;
+    font-family:'ProggyClean', 'Roboto Mono', monospace;
     margin: 0 5px;
 }
 
@@ -127,17 +135,26 @@ div.word {
     display: block;
     position: fixed;
     top: 198px;
-    left: calc(43.7% - 200px);
+    left: 18vmin;
 }
 
-/* @media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1600px) {
     #game:focus #cursor {
         display: block;
         position: fixed;
         top: 198px;
         left: 56vmin;
     }
-} */
+}
+
+@media only screen and (max-width: 1920px) {
+    #game:focus #cursor {
+        display: block;
+        position: fixed;
+        top: 198px;
+        left: 66vmin;
+    }
+}
 
 #game.over #words {
     opacity: .5;
