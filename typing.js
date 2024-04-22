@@ -5,11 +5,11 @@ window.timer = null;
 window.gameStart = null;
 window.pauseTime = 0;
 
-function addClass(el,name) {
-  el.className += ' '+name;
+function addClass(el, name) {
+  el.className += ' ' + name;
 }
-function removeClass(el,name) {
-  el.className = el.className.replace(name,'');
+function removeClass(el, name) {
+  el.className = el.className.replace(name, '');
 }
 
 function randomWord() {
@@ -53,21 +53,63 @@ function gameOver() {
   document.getElementById('info').innerHTML = `WPM: ${result}`;
 }
 
+let charIndex = 0;
 document.getElementById('game').addEventListener('keyup', ev => {
-  const key = ev.key;
+  let spacekey = ev.key;
+  console.log(`real : ${ev.key}`);
+
+
+  const keys = [...'abcdefghijklmnopqrstuvwxyz'];
+  const values = [...'cjxtgueizslbaoqkmpnfhwyr'];
+  const buildMap = (keys, values) => {
+    const map = new Map();
+    for (let i = 0; i < keys.length; i++) {
+      map.set(keys[i], values[i]);
+
+    };
+
+    let inputData = ev.key;
+
+    console.log(map.get(`${inputData}`));
+    key = `${map.get(`${inputData}`)}`;
+    console.log(key);
+    charIndex++;
+    // return map;
+
+
+  };
+  let key = ev.key;
+  buildMap(keys, values);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const currentWord = document.querySelector('.word.current');
   const currentLetter = document.querySelector('.letter.current');
   const expected = currentLetter?.innerHTML || ' ';
   const isLetter = key.length === 1 && key !== ' ';
-  const isSpace = key === ' ';
-  const isBackspace = key === 'Backspace';
+  const isSpace = spacekey === ' ';
+  const isBackspace = spacekey === 'Backspace';
   const isFirstLetter = currentLetter === currentWord.firstChild;
 
   if (document.querySelector('#game.over')) {
     return;
   }
 
-  console.log({key,expected});
+  console.log({ key, expected });
 
   if (!window.timer && isLetter) {
     window.timer = setInterval(() => {
