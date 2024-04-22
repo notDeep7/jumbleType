@@ -112,6 +112,7 @@ div.word {
 
 #cursor {
     display: none;
+
     width: 2px;
     height: 1.6rem;
     background: var(--primaryColor);
@@ -121,8 +122,30 @@ div.word {
     animation: blink .3s infinite;
 }
 
+
 #game:focus #cursor {
     display: block;
+    position: fixed;
+    top: 198px;
+    left: 18vmin;
+}
+
+@media only screen and (max-width: 1600px) {
+    #game:focus #cursor {
+        display: block;
+        position: fixed;
+        top: 198px;
+        left: 56vmin;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    #game:focus #cursor {
+        display: block;
+        position: fixed;
+        top: 198px;
+        left: 66vmin;
+    }
 }
 
 #game.over #words {

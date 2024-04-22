@@ -60,7 +60,7 @@ document.getElementById('game').addEventListener('keyup', ev => {
 
 
   const keys = [...'abcdefghijklmnopqrstuvwxyz'];
-  const values = [...'cjxtgueizslbaoqkmpnfhwyr'];
+  const values = [...'cjxtgueizslbaoqkmpnfhwyrd'];
   const buildMap = (keys, values) => {
     const map = new Map();
     for (let i = 0; i < keys.length; i++) {
