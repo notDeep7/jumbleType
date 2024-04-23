@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes">
+
     <title>JumbleType</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,7 +18,7 @@
             <div id="info"></div>
         </div>
         <div id="game" tabindex="0">
-            <div id="words"></div>
+            <div id="words" style="margin: auto;"></div>
             <div id="cursor"></div>
             <div id="focus-error">Click here to focus</div>
         </div>
@@ -29,7 +30,7 @@
     <script>
         const icon = document.getElementById("icon");
 
-        icon.onclick = function() {
+        icon.onclick = function () {
             document.body.classList.toggle("light-theme");
             if (document.body.classList.contains("light-theme")) {
                 icon.src = "images/moon.png";

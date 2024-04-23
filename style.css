@@ -7,14 +7,15 @@
     --bgColor: rgb(18, 18, 18);
     --textPrimary: #d6d2bc;
     --primaryColor: #d6d2bc;
+
 }
 
 .light-theme {
     --bgColor: #efead0;
     --textPrimary: #333538;
     --primaryColor: #5f605e;
-}
 
+}
 
 * {
     font-family: '3270';
@@ -26,12 +27,14 @@ body {
     background-color: var(--bgColor);
     color: var(--textPrimary);
     font-size: 1.4rem;
+    margin: 35vmin;
+    transition: 1s ease;
 
 }
 
 main {
     width: 600px;
-    margin: 260px auto;
+    margin: 50px auto;
 }
 
 h1 {
@@ -64,10 +67,10 @@ div#game:focus {
     outline: 0;
 }
 
-/* #words {
+#words {
     filter: blur(5px);
-    color: var(--textSecondary);
-} */
+    /* color: var(--textSecondary); */
+}
 
 #game:focus #words {
     filter: blur(0);
@@ -171,9 +174,9 @@ div.word {
 .img-container {
     height: 20vmin;
     text-align: center;
-    margin-top: 50%;
+    margin-top: -58%;
 }
 
-#words {
+/* #words {
     margin: 260px auto;
-}
+} */

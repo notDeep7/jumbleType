@@ -182,13 +182,16 @@ document.getElementById('game').addEventListener('keyup', ev => {
       removeClass(currentWord.lastChild, 'incorrect');
       removeClass(currentWord.lastChild, 'correct');
     }
-  }
 
+  }
   // move lines / words
-  if (currentWord.getBoundingClientRect().top > 250) {
+  if (currentWord.getBoundingClientRect().top > 400) {
     const words = document.getElementById('words');
+    // words.style.marginTop = '-35px';
     const margin = parseInt(words.style.marginTop || '0px');
-    words.style.marginTop = (margin - 35) + 'px';
+
+    // words.style.marginTop = (margin - 35) + 'px';
+    alert("move");
   }
 
   // move cursor
@@ -203,9 +206,5 @@ console.log(startWord.offsetLeft);
 const cursorTest = document.getElementById('cursor');
 cursor.style.left = startWord.offsetLeft + 'px';
 cursor.style.top = startWord.offsetTop + 'px';
-document.getElementById('newGameBtn').addEventListener('click', () => {
-  gameOver();
-  newGame();
-});
 
 newGame();
