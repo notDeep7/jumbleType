@@ -3,21 +3,31 @@
     src: url('fonts/3270Mono-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'necapc3';
+    src: url('fonts/necapc3.ttf');
+}
+
+@font-face {
+    font-family: 'pixelnes';
+    src: url('fonts/pixelNes.otf');
+}
+
 :root {
     --bgColor: rgb(18, 18, 18);
-    --textPrimary: #d6d2bc;
-    --primaryColor: #d6d2bc;
+    --textPrimary: #2c9080;
+    --primaryColor: #2c9080;
 }
 
 .light-theme {
-    --bgColor: #efead0;
-    --textPrimary: #333538;
-    --primaryColor: #5f605e;
+    --bgColor: #2c9080;
+    --textPrimary: rgb(18, 18, 18);
+    --primaryColor: rgb(18, 18, 18);
 }
 
 
 * {
-    font-family: '3270';
+    font-family: 'necapc3';
 
 }
 
@@ -38,12 +48,15 @@ main {
 h1 {
     color: var(--primaryColor);
     text-align: center;
+    font-family: 'pixelnes';
+    text-shadow: 0 0 20px #2c9080;
+    position: relative;
+    left: -20px;
 }
 
 #header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 20px 6px 30px;
 }
 
 #buttons {
@@ -52,6 +65,9 @@ h1 {
 
 #info {
     color: var(--primaryColor);
+    position: relative;
+    bottom: 20px;
+    left: 5px;
 }
 
 div#game {
@@ -68,6 +84,7 @@ div#game:focus {
 #words {
     filter: blur(5px);
     margin: auto;
+    /* text-shadow: 0 0 20px */
     /* color: var(--textSecondary); */
 }
 
@@ -179,3 +196,13 @@ div.word {
 /* #words {
     margin: 260px auto;
 } */
+
+/* ul {
+    list-style-type: none;
+} */
+
+.right-gif {
+    position: relative;
+    top: -77px;
+    right: -460px;
+}
