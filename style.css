@@ -5,10 +5,16 @@
 
 :root {
     --bgColor: rgb(18, 18, 18);
-    --textPrimary: #fff;
-    --textSecondary: #666;
-    --primaryColor: rgb(174, 68, 255);
+    --textPrimary: #d6d2bc;
+    --primaryColor: #d6d2bc;
 }
+
+.light-theme {
+    --bgColor: #efead0;
+    --textPrimary: #333538;
+    --primaryColor: #5f605e;
+}
+
 
 * {
     font-family: '3270';
@@ -25,17 +31,12 @@ body {
 
 main {
     width: 600px;
-    margin: 50px auto;
+    margin: 260px auto;
 }
 
 h1 {
     color: var(--primaryColor);
     text-align: center;
-}
-
-h1 svg {
-    width: 40px;
-    fill: var(--primaryColor);
 }
 
 #header {
@@ -50,15 +51,6 @@ h1 svg {
 
 #info {
     color: var(--primaryColor);
-}
-
-button {
-    background: rgba(255, 255, 255, .2);
-    border: 0;
-    color: rgba(255, 255, 255, .5);
-    padding: 5px 20px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 div#game {
@@ -169,4 +161,19 @@ div.word {
 
 #game.over #focus-error {
     display: none;
+}
+
+#icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.img-container {
+    height: 20vmin;
+    text-align: center;
+    margin-top: 50%;
+}
+
+#words {
+    margin: 260px auto;
 }
