@@ -10,8 +10,9 @@
     --primaryColor: rgb(174, 68, 255);
 }
 
-*{
+* {
     font-family: '3270';
+
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     background-color: var(--bgColor);
     color: var(--textPrimary);
     font-size: 1.4rem;
+
 }
 
 main {
@@ -92,7 +94,7 @@ div#game:focus {
 
 div.word {
     display: inline-block;
-    font-family:'ProggyClean', 'Roboto Mono', monospace;
+    font-family: 'ProggyClean', 'Roboto Mono', monospace;
     margin: 0 5px;
 }
 
@@ -138,7 +140,7 @@ div.word {
     left: 18vmin;
 }
 
-@media only screen and (max-width: 1600px) {
+/* @media only screen and (max-width: 1600px) {
     #game:focus #cursor {
         display: block;
         position: fixed;
@@ -154,7 +156,7 @@ div.word {
         top: 198px;
         left: 66vmin;
     }
-}
+} */
 
 #game.over #words {
     opacity: .5;

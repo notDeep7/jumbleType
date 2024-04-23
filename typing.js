@@ -170,7 +170,7 @@ document.getElementById('game').addEventListener('keyup', ev => {
     }
     if (currentLetter && !isFirstLetter) {
       // move back one letter, invalidate letter
-      
+
       removeClass(currentLetter, 'current');
 
       addClass(currentLetter.previousSibling, 'current');
@@ -198,7 +198,11 @@ document.getElementById('game').addEventListener('keyup', ev => {
   cursor.style.top = (nextLetter || nextWord).getBoundingClientRect().top + 2 + 'px';
   cursor.style.left = (nextLetter || nextWord).getBoundingClientRect()[nextLetter ? 'left' : 'right'] + 'px';
 });
-
+const startWord = document.getElementById('game');
+console.log(startWord.offsetLeft);
+const cursorTest = document.getElementById('cursor');
+cursor.style.left = startWord.offsetLeft + 'px';
+cursor.style.top = startWord.offsetTop + 'px';
 document.getElementById('newGameBtn').addEventListener('click', () => {
   gameOver();
   newGame();
