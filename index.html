@@ -18,19 +18,23 @@
             <div id="info"></div>
         </div>
         <div id="game" tabindex="0">
-            <div id="words" style="margin: auto;"></div>
+            <div id="words"></div>
             <div id="cursor"></div>
             <div id="focus-error">Click here to focus</div>
+            <div class="mistakesCount">
+                Mistakes:0
+            </div>
         </div>
         <div class="img-container">
-            <img id="icon" src="images/sun.png" alt="">
+            <img id="icon" src="images/sun.png" onclick="iconClick()">
         </div>
+
     </main>
     <script src="typing.js"></script>
     <script>
         const icon = document.getElementById("icon");
 
-        icon.onclick = function () {
+        function iconClick() {
             document.body.classList.toggle("light-theme");
             if (document.body.classList.contains("light-theme")) {
                 icon.src = "images/moon.png";

@@ -185,15 +185,26 @@ document.getElementById('game').addEventListener('keyup', ev => {
 
   }
   // move lines / words
+  // if (currentWord.getBoundingClientRect().top > 400) {
+  //   const words = document.getElementById('words');
+  //   words.style.marginTop = '-35px';
+  //   const margin = parseInt(words.style.marginTop || '0px');
+  //   words.style.marginTop = (margin - 35) + 'px';
+  //   alert("move");
+  // }
   if (currentWord.getBoundingClientRect().top > 400) {
     const words = document.getElementById('words');
-    // words.style.marginTop = '-35px';
     const margin = parseInt(words.style.marginTop || '0px');
+    words.style.marginTop = (margin - 35) + 'px';
 
-    // words.style.marginTop = (margin - 35) + 'px';
-    alert("move");
   }
-
+  //   if (currentWord.getBoundingClientRect().top > 200) {
+  // if(isBackspace){
+  //     const words = document.getElementById('words');
+  //     const margin = parseInt(words.style.marginTop || '0px');
+  //     words.style.marginTop = (margin + 35) + 'px';
+  //     alert("move");
+  //   }}
   // move cursor
   const nextLetter = document.querySelector('.letter.current');
   const nextWord = document.querySelector('.word.current');
@@ -205,6 +216,6 @@ const startWord = document.getElementById('game');
 console.log(startWord.offsetLeft);
 const cursorTest = document.getElementById('cursor');
 cursor.style.left = startWord.offsetLeft + 'px';
-cursor.style.top = startWord.offsetTop + 'px';
+cursor.style.top = startWord.offsetTop + 25 + 'px';
 
 newGame();

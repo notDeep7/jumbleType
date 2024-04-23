@@ -7,15 +7,14 @@
     --bgColor: rgb(18, 18, 18);
     --textPrimary: #d6d2bc;
     --primaryColor: #d6d2bc;
-
 }
 
 .light-theme {
     --bgColor: #efead0;
     --textPrimary: #333538;
     --primaryColor: #5f605e;
-
 }
+
 
 * {
     font-family: '3270';
@@ -28,8 +27,7 @@ body {
     color: var(--textPrimary);
     font-size: 1.4rem;
     margin: 35vmin;
-    transition: 1s ease;
-
+    transition: 1s ease-in;
 }
 
 main {
@@ -69,6 +67,7 @@ div#game:focus {
 
 #words {
     filter: blur(5px);
+    margin: auto;
     /* color: var(--textSecondary); */
 }
 
