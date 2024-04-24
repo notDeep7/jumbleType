@@ -192,19 +192,27 @@ document.getElementById('game').addEventListener('keyup', ev => {
   //   words.style.marginTop = (margin - 35) + 'px';
   //   alert("move");
   // }
-  if (currentWord.getBoundingClientRect().top > 400) {
+
+  // forForwarding
+  if (currentWord.getBoundingClientRect().top > 450) {
     const words = document.getElementById('words');
     const margin = parseInt(words.style.marginTop || '0px');
     words.style.marginTop = (margin - 35) + 'px';
 
   }
-  //   if (currentWord.getBoundingClientRect().top > 200) {
-  // if(isBackspace){
-  //     const words = document.getElementById('words');
-  //     const margin = parseInt(words.style.marginTop || '0px');
-  //     words.style.marginTop = (margin + 35) + 'px';
-  //     alert("move");
-  //   }}
+
+  //forBackspace
+  if (currentWord.getBoundingClientRect().top > 200) {
+    if (isBackspace) {
+
+      const words = document.getElementById('words');
+      const margin = parseInt(words.style.marginTop || '0px');
+      if (words.style.marginTop != 0 + 'px') {
+        words.style.marginTop = (margin + 35) + 'px';
+        // alert("move");
+      }
+    }
+  }
   // move cursor
   const nextLetter = document.querySelector('.letter.current');
   const nextWord = document.querySelector('.word.current');
