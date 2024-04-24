@@ -14,15 +14,13 @@
         <h1>JumbleType</h1>
         <span class="right-gif"><img src="images/computer.gif" alt=""></span>
         <div id="header">
-            <div style="color: red; text-shadow: 0 0 20px red;" id="info"></div>
+            <div id="info"></div>
+            <div id="mistake"><span style="font-size: 25px">mistake: </span>0</div>
         </div>
         <div id="game" tabindex="0">
             <div id="words"></div>
             <div id="cursor"></div>
             <div id="focus-error">Click here to focus</div>
-            <div class="mistakesCount">
-                Mistakes:0
-            </div>
         </div>
         <div class="img-container">
             <img id="icon" src="images/sun.png" onclick="iconClick()">
@@ -38,8 +36,10 @@
             document.body.classList.toggle("light-theme");
             if (document.body.classList.contains("light-theme")) {
                 icon.src = "images/moon.png";
+                info.style.color = "yellow";
             } else {
                 icon.src = "images/sun.png";
+                info.style.color = "red"
             }
         }
     </script>
