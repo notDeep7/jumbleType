@@ -11,11 +11,10 @@
 
 <body>
     <main>
-        <h1>
-            JumbleType
-        </h1>
+        <h1>JumbleType</h1>
+        <span class="right-gif"><img src="images/computer.gif" alt=""></span>
         <div id="header">
-            <div id="info"></div>
+            <div style="color: red; text-shadow: 0 0 20px red;" id="info"></div>
         </div>
         <div id="game" tabindex="0">
             <div id="words"></div>
@@ -33,6 +32,7 @@
     <script src="typing.js"></script>
     <script>
         const icon = document.getElementById("icon");
+        const info = document.getElementById("info");
 
         function iconClick() {
             document.body.classList.toggle("light-theme");
