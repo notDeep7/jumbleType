@@ -24,7 +24,7 @@ function formatWord(word) {
 
 function newGame() {
   document.getElementById('words').innerHTML = '';
-  for (let i = 0; i < 29; i++) {
+  for (let i = 0; i < 28; i++) {
     document.getElementById('words').innerHTML += formatWord(randomWord());
   }
   addClass(document.querySelector('.word'), 'current');
