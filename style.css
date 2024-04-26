@@ -36,12 +36,14 @@ body {
     background-color: var(--bgColor);
     color: var(--textPrimary);
     font-size: 1.4rem;
-    margin: 35vmin;
+    margin: 30vmin;
     transition: 1s ease-in;
+    height: 100vh;
 }
 
 main {
-    width: 600px;
+    width: 32vw;
+    max-width: 600px;
     margin: 50px auto;
 }
 
@@ -50,8 +52,12 @@ h1 {
     text-align: center;
     font-family: 'pixelnes';
     text-shadow: 0 0 50px;
-    position: relative;
-    left: -20px;
+}
+
+.jumbletype {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #header {
@@ -82,7 +88,7 @@ h1 {
 div#game {
     line-height: 35px;
     height: 105px;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
@@ -197,9 +203,7 @@ div.word {
 }
 
 .img-container {
-    height: 20vmin;
     text-align: center;
-    margin-top: -58%;
 }
 
 /* #words {
@@ -211,8 +215,52 @@ div.word {
 } */
 
 .right-gif {
-    position: relative;
-    top: -77px;
-    right: -460px;
+    margin-left: 20px;
 }
 
+@media (min-width: 375px) and (max-width: 1024px) {
+
+    body {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        margin: auto;
+        height: 100vh;
+        width: 75%;
+        padding-top: 25vh;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #header {
+        margin: 0 0 20px 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #info {
+        display: inline-block;
+        justify-content: center;
+        position: static;
+        margin: auto;
+    }
+
+    #mistake {
+        display: inline-block;
+        justify-content: center;
+        position: static;
+    }
+
+    .right-gif {
+        margin-left: 10px;
+    }
+
+}
