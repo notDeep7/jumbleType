@@ -11,8 +11,13 @@
 
 <body>
     <main>
-        <h1>JumbleType</h1>
-        <span class="right-gif"><img src="images/computer.gif" alt=""></span>
+        <div class="img-container">
+            <img id="icon" src="images/sun.png" onclick="iconClick()">
+        </div>
+        <div class="jumbletype">
+            <h1>JumbleType</h1>
+            <span class="right-gif"><img src="images/computer.gif" alt=""></span>
+        </div>
         <div id="header">
             <div id="info"></div>
             <div id="mistake"><span style="font-size: 25px">mistake: </span>0</div>
@@ -22,10 +27,6 @@
             <div id="cursor"></div>
             <div id="focus-error">Click here to focus</div>
         </div>
-        <div class="img-container">
-            <img id="icon" src="images/sun.png" onclick="iconClick()">
-        </div>
-
     </main>
     <script src="typing.js"></script>
     <script>
